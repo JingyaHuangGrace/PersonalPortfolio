@@ -1,7 +1,9 @@
 //index.server.routes.js-Jingya Huang 301221651 June 7, 2023
+
+// imports the Express module and creates a new router object
 var express = require('express');
 var router = express.Router();
-
+//use router.get method to render 5 views with corresponding titles
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
