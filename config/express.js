@@ -22,7 +22,7 @@ module.exports = function () {
     app.set('views', './app/views'); //render views
     app.set('view engine', 'ejs'); //render views
     app.use('/', require('../app/routes/index.server.routes.js'));
-    app.use(express.static('./public'));
+    app.use(express.static('./public')); // add static file support
     app.use(express.static("./node_modules"));
 
     return app;
