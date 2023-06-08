@@ -19,8 +19,8 @@ module.exports = function () {
     }));
     app.use(bodyParser.json());
     app.use(methodOverride());
-    app.set('views', './app/views'); //render views
-    app.set('view engine', 'ejs'); //render views
+    app.set('views', './app/views'); //sets the directory where viewes are stored
+    app.set('view engine', 'ejs'); // sets the view engine to EJS
     app.use('/', require('../app/routes/index.server.routes.js'));
     app.use(express.static('./public')); // add static file support
     app.use(express.static("./node_modules"));
